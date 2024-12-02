@@ -53,6 +53,18 @@ pipeline {
       """
       }
     }
+
+    stage('Docker Container') {
+      steps {
+      sh """
+      docker rmi kyc3610/spring-petclinic:$BUILD_NUMBER
+      docker rmi kyc3610/spring-petclinic:latest
+      """
+      }
+    }
+
+
+
     
   }
 }
