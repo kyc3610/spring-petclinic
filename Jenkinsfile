@@ -23,8 +23,7 @@ pipeline {
     stage('Docker Image') {
       steps {
         dir("{env.WORKSPACE}") {
-          ds
-          """
+          sh """
           docker build -t kyc3610/spring-petclinic:$BUILD_NUMBER .
           docker tag kyc3610/spring-petclinic:$BUILD_NUMBER kyc3610/spring-petclinic:latest
           """
