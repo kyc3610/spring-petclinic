@@ -41,6 +41,6 @@ pipeline {
       echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin
       docker push kyc3610/spring-petclinic:latest
       """
-      
+    }  
   }
 }
