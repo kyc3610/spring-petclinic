@@ -64,17 +64,17 @@ pipeline {
         docker rmi $(docker images -q)
         docker run -d -p 80:8080 --name spring-petclinic kyc3610/spring-petclinic:latest
         ''',
-         execTimeout: 120000,
-         flatten: false,
-         makeEmptyDirs: false,
-         noDefaultExcludes: false,
-         patternSeparator: '[, ]+',
-         remoteDirectory: '',
-         remoteDirectorySDF: false,
-         removePrefix: '', sourceFiles: '')],
-         usePromotionTimestamp: false,
-         useWorkspaceInPromotion: false,
-         verbose: false)])
+        execTimeout: 120000,
+        flatten: false,
+        makeEmptyDirs: false,
+        noDefaultExcludes: false,
+        patternSeparator: '[, ]+',
+        remoteDirectory: '',
+        remoteDirectorySDF: false,
+        removePrefix: '', sourceFiles: '')],
+        usePromotionTimestamp: false,
+        useWorkspaceInPromotion: false,
+        verbose: false)])
 
       }
     }
