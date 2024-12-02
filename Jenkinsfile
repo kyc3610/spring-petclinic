@@ -13,7 +13,11 @@ pipeline {
         git url: 'https://github.com/kyc3610/spring-petclinic.git', branch: 'main'
       }
     }
-      
+    stage('Maven Build') {
+      steps {
+        sh 'mvn -Dmaven.test.failure.ignore=true clean package'
+      }
+    }
       
       
   }
